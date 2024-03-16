@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>956542968318-1sog3ju0p39uc29p4evuqte6qi4mjt47.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.956542968318-1sog3ju0p39uc29p4evuqte6qi4mjt47</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAi4KxoLQGXS6shQx6_g1RG1VBNX2BwtPE</string>
+	<key>GCM_SENDER_ID</key>
+	<string>956542968318</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.studySmart</string>
+	<key>PROJECT_ID</key>
+	<string>study-smart-cab90</string>
+	<key>STORAGE_BUCKET</key>
+	<string>study-smart-cab90.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:956542968318:ios:4ab67e3ad87ddf8fbf60af</string>
+	<key>DATABASE_URL</key>
+	<string>https://study-smart-cab90-default-rtdb.europe-west1.firebasedatabase.app</string>
+</dict>
+</plist>
