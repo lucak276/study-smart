@@ -46,25 +46,20 @@ class _RegisterState extends State<Register> {
   }
 
   _fetchMajors() async {
-    var querySnapshot = await FirebaseFirestore.instance
-          .collection('Majors')
-          .get();
+    var querySnapshot =
+        await FirebaseFirestore.instance.collection('Majors').get();
 
     for (var queryDocumentSnapshot in querySnapshot.docs) {
-      majorWidgets.add(
-        ListTile(
-          onTap: () {
-            setState(() {
-              major = queryDocumentSnapshot.id;
-              _boxExpanded = !_boxExpanded;
-            });
-          },
-          title: Text(queryDocumentSnapshot.id),
-        )
-      );
-      majorWidgets.add(
-        const Divider(indent: 10, endIndent: 10)
-      );
+      majorWidgets.add(ListTile(
+        onTap: () {
+          setState(() {
+            major = queryDocumentSnapshot.id;
+            _boxExpanded = !_boxExpanded;
+          });
+        },
+        title: Text(queryDocumentSnapshot.id),
+      ));
+      majorWidgets.add(const Divider(indent: 10, endIndent: 10));
     }
     majorWidgets.add(const SizedBox(height: 5));
   }
@@ -80,6 +75,8 @@ class _RegisterState extends State<Register> {
         await FirebaseAuth.instance.createUserWithEmailAndPassword(
             email: _emailController.text.trim(),
             password: _passwordController.text.trim());
+
+        /*
         var querySnapshot =
             await FirebaseFirestore.instance.collection('Users').add({
           'email': _emailController.text.trim(),
@@ -90,12 +87,12 @@ class _RegisterState extends State<Register> {
           'exercisesSolved': '0',
           'answersGiven': '0',
           'minutesLearned': '0',
-          'questionsAsked': '0'
-        });
+          'questionsAsked': '0'   */
+        // });
 
         if (mounted) {
           uni = _uniController.text.trim();
-          docID = querySnapshot.id;
+          //  docID = querySnapshot.id;
           email = _emailController.text.trim();
           password = _passwordController.text.trim();
           firstName = widget.firstName;
@@ -244,38 +241,35 @@ class _RegisterState extends State<Register> {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.fromLTRB(20, 10, 20, 0),
-                  child: GestureDetector(
-                    onTap: () {
-                      setState(() {
-                        _boxExpanded = !_boxExpanded;
-                      });
-                    },
-                    child: Container(
-                      height: 60,
-                      width: double.infinity,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20),
-                        border: Border.all(color: mainColorScheme),
-                        color: Colors.white,
-                      ),
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Text(
-                              major
-                            ),
-                            Icon(
-                              _boxExpanded ? Icons.arrow_downward_outlined : Icons.arrow_upward_outlined
-                            )
-                          ],
+                    padding: const EdgeInsets.fromLTRB(20, 10, 20, 0),
+                    child: GestureDetector(
+                      onTap: () {
+                        setState(() {
+                          _boxExpanded = !_boxExpanded;
+                        });
+                      },
+                      child: Container(
+                        height: 60,
+                        width: double.infinity,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20),
+                          border: Border.all(color: mainColorScheme),
+                          color: Colors.white,
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(major),
+                              Icon(_boxExpanded
+                                  ? Icons.arrow_downward_outlined
+                                  : Icons.arrow_upward_outlined)
+                            ],
+                          ),
                         ),
                       ),
-                    ),
-                  )
-                ),
+                    )),
                 Stack(
                   children: [
                     Column(
@@ -289,15 +283,16 @@ class _RegisterState extends State<Register> {
                                 style: ElevatedButton.styleFrom(
                                     padding: EdgeInsets.zero,
                                     shape: RoundedRectangleBorder(
-                                        borderRadius: BorderRadius.circular(25))),
+                                        borderRadius:
+                                            BorderRadius.circular(25))),
                                 child: Container(
                                   width: 250,
                                   height: 60,
                                   alignment: Alignment.center,
                                   child: Text(
                                     'Fertig',
-                                    style:
-                                        TextStyle(fontSize: 18, color: mainFontColor),
+                                    style: TextStyle(
+                                        fontSize: 18, color: mainFontColor),
                                   ),
                                 ),
                               ),
@@ -307,26 +302,25 @@ class _RegisterState extends State<Register> {
                       ],
                     ),
                     if (_boxExpanded)
-                    Padding(
-                      padding: const EdgeInsets.fromLTRB(20, 0, 20, 10),
-                      child: Container(
-                        width: double.infinity,
-                        height: 200,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(20),
-                          border: Border.all(color: mainColorScheme),
-                          color: Colors.white,
-                        ),
-                        child: Padding(
-                          padding: const EdgeInsets.all(10),
-                          child: SingleChildScrollView(
-                            child: Column(
-                              children: majorWidgets,
+                      Padding(
+                          padding: const EdgeInsets.fromLTRB(20, 0, 20, 10),
+                          child: Container(
+                            width: double.infinity,
+                            height: 200,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(20),
+                              border: Border.all(color: mainColorScheme),
+                              color: Colors.white,
                             ),
-                          ),
-                        ),
-                      )
-                    ),
+                            child: Padding(
+                              padding: const EdgeInsets.all(10),
+                              child: SingleChildScrollView(
+                                child: Column(
+                                  children: majorWidgets,
+                                ),
+                              ),
+                            ),
+                          )),
                   ],
                 ),
               ],
