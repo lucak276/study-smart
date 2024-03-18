@@ -76,7 +76,6 @@ class _RegisterState extends State<Register> {
             email: _emailController.text.trim(),
             password: _passwordController.text.trim());
 
-        /*
         var querySnapshot =
             await FirebaseFirestore.instance.collection('Users').add({
           'email': _emailController.text.trim(),
@@ -87,8 +86,8 @@ class _RegisterState extends State<Register> {
           'exercisesSolved': '0',
           'answersGiven': '0',
           'minutesLearned': '0',
-          'questionsAsked': '0'   */
-        // });
+          'questionsAsked': '0'
+        });
 
         if (mounted) {
           uni = _uniController.text.trim();
@@ -225,6 +224,7 @@ class _RegisterState extends State<Register> {
                   child: TextField(
                     controller: _passwordController,
                     enableSuggestions: true,
+                    obscureText: true,
                     decoration: InputDecoration(
                       hintText: 'Passwort',
                       hintStyle: TextStyle(color: mainFontColor),

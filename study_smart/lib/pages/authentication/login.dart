@@ -147,6 +147,7 @@ class _LoginState extends State<Login> {
                   child: TextField(
                     controller: _passwordController,
                     enableSuggestions: true,
+                    obscureText: true,
                     decoration: InputDecoration(
                       hintText: 'Passwort',
                       hintStyle: TextStyle(color: mainFontColor),
@@ -182,7 +183,7 @@ class _LoginState extends State<Login> {
                           ),
                         ),
                       ),
-                      const SizedBox(height: 150)
+                const SizedBox(height: 150)
               ],
             ),
           )
