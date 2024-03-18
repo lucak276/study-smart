@@ -12,7 +12,7 @@ import 'package:study_smart/utils/globals.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-
+  
   /// Set the device orientation to landscape
   SystemChrome.setPreferredOrientations(
       [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
@@ -22,9 +22,10 @@ Future<void> main() async {
   box = await Hive.openBox('userbox');
 
   getDBInformation();
-
+  
   runApp(const MyApp());
 }
+
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});

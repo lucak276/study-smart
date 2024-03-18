@@ -44,50 +44,38 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyBp-_yoSGMD860dO4lOlKqYUK4pN-bVnLA',
-    appId: '1:956542968318:web:d0b7258ea7127e89bf60af',
-    messagingSenderId: '956542968318',
-    projectId: 'study-smart-cab90',
-    authDomain: 'study-smart-cab90.firebaseapp.com',
-    databaseURL:
-        'https://study-smart-cab90-default-rtdb.europe-west1.firebasedatabase.app',
-    storageBucket: 'study-smart-cab90.appspot.com',
-    measurementId: 'G-V8JKBXKSDR',
+    apiKey: 'AIzaSyCFijU36Jtn7CNww0rfuj-1CP6Mtds8cIM',
+    appId: '1:224751925440:web:69a34c4fb2139634a49525',
+    messagingSenderId: '224751925440',
+    projectId: 'studysmart-7d930',
+    authDomain: 'studysmart-7d930.firebaseapp.com',
+    storageBucket: 'studysmart-7d930.appspot.com',
+    measurementId: 'G-3Z1MHNRRJL',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyBz7T5zJvY_KT-DdV_mgHkiQw0r8Rfg_T0',
-    appId: '1:956542968318:android:8fbc015dcbe02f06bf60af',
-    messagingSenderId: '956542968318',
-    projectId: 'study-smart-cab90',
-    databaseURL:
-        'https://study-smart-cab90-default-rtdb.europe-west1.firebasedatabase.app',
-    storageBucket: 'study-smart-cab90.appspot.com',
+    apiKey: 'AIzaSyD_Ms09KsGYL0sdoRUVGHR_VQLMdpYYn3Y',
+    appId: '1:224751925440:android:8fb90ecbb46662fea49525',
+    messagingSenderId: '224751925440',
+    projectId: 'studysmart-7d930',
+    storageBucket: 'studysmart-7d930.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyAi4KxoLQGXS6shQx6_g1RG1VBNX2BwtPE',
-    appId: '1:956542968318:ios:4ab67e3ad87ddf8fbf60af',
-    messagingSenderId: '956542968318',
-    projectId: 'study-smart-cab90',
-    databaseURL:
-        'https://study-smart-cab90-default-rtdb.europe-west1.firebasedatabase.app',
-    storageBucket: 'study-smart-cab90.appspot.com',
-    iosClientId:
-        '956542968318-1sog3ju0p39uc29p4evuqte6qi4mjt47.apps.googleusercontent.com',
+    apiKey: 'AIzaSyAzW3DKXiTbwd80fzkVka1ZCQCxTMgbl-k',
+    appId: '1:224751925440:ios:e86090913df35f8ca49525',
+    messagingSenderId: '224751925440',
+    projectId: 'studysmart-7d930',
+    storageBucket: 'studysmart-7d930.appspot.com',
     iosBundleId: 'com.example.studySmart',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyAi4KxoLQGXS6shQx6_g1RG1VBNX2BwtPE',
-    appId: '1:956542968318:ios:4ab67e3ad87ddf8fbf60af',
-    messagingSenderId: '956542968318',
-    projectId: 'study-smart-cab90',
-    databaseURL:
-        'https://study-smart-cab90-default-rtdb.europe-west1.firebasedatabase.app',
-    storageBucket: 'study-smart-cab90.appspot.com',
-    iosClientId:
-        '956542968318-1sog3ju0p39uc29p4evuqte6qi4mjt47.apps.googleusercontent.com',
+    apiKey: 'AIzaSyAzW3DKXiTbwd80fzkVka1ZCQCxTMgbl-k',
+    appId: '1:224751925440:ios:e86090913df35f8ca49525',
+    messagingSenderId: '224751925440',
+    projectId: 'studysmart-7d930',
+    storageBucket: 'studysmart-7d930.appspot.com',
     iosBundleId: 'com.example.studySmart',
   );
 }

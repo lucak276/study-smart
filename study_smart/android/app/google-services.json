@@ -1,37 +1,26 @@
 {
   "project_info": {
-    "project_number": "956542968318",
-    "firebase_url": "https://study-smart-cab90-default-rtdb.europe-west1.firebasedatabase.app",
-    "project_id": "study-smart-cab90",
-    "storage_bucket": "study-smart-cab90.appspot.com"
+    "project_number": "224751925440",
+    "project_id": "studysmart-7d930",
+    "storage_bucket": "studysmart-7d930.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:956542968318:android:8fbc015dcbe02f06bf60af",
+        "mobilesdk_app_id": "1:224751925440:android:8fb90ecbb46662fea49525",
         "android_client_info": {
           "package_name": "com.example.study_smart"
         }
       },
-      "oauth_client": [
-        {
-          "client_id": "956542968318-bqii4f9r44ok83b43q2hj4njjpvjlg0g.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
+      "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyBz7T5zJvY_KT-DdV_mgHkiQw0r8Rfg_T0"
+          "current_key": "AIzaSyD_Ms09KsGYL0sdoRUVGHR_VQLMdpYYn3Y"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "956542968318-bqii4f9r44ok83b43q2hj4njjpvjlg0g.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
+          "other_platform_oauth_client": []
         }
       }
     }
