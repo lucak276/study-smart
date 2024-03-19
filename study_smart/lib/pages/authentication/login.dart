@@ -27,10 +27,11 @@ class _LoginState extends State<Login> {
     super.dispose();
   }
 
-  Future signIn() async {
+  Future<void> signIn(BuildContext context) async {
     setState(() {
       isLoading = true;
     });
+
     try {
       await FirebaseAuth.instance.signInWithEmailAndPassword(
         email: _emailController.text.trim(),
@@ -48,7 +49,7 @@ class _LoginState extends State<Login> {
           lastName = data['lastName'];
           uni = data['uni'];
           joined = toDateTime(data['joined']);
-          major = data['major'];
+          //major = data['major'];
           questionsAsked = int.parse(data['questionsAsked']);
           answersGiven = int.parse(data['answersGiven']);
           exercisesSolved = int.parse(data['exercisesSolved']);
@@ -62,12 +63,10 @@ class _LoginState extends State<Login> {
         loggedIn = true;
         saveToHive();
 
-        Navigator.push(
-          context,
-          SwipeRightTransition(
-            widget: const Landing(),
-          ),
-        );
+        Navigator.of(context).pushReplacement(
+        MaterialPageRoute(builder: (context) => Landing()),
+      );
+
       }
     } catch (e) {
       _emailController.clear();
@@ -167,7 +166,7 @@ class _LoginState extends State<Login> {
                 isLoading
                     ? const CircularProgressIndicator()
                     : ElevatedButton(
-                        onPressed: signIn,
+                        onPressed: () => signIn(context),
                         style: ElevatedButton.styleFrom(
                             padding: EdgeInsets.zero,
                             shape: RoundedRectangleBorder(
