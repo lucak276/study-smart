@@ -64,9 +64,8 @@ class _LoginState extends State<Login> {
         saveToHive();
 
         Navigator.of(context).pushReplacement(
-        MaterialPageRoute(builder: (context) => Landing()),
-      );
-
+          MaterialPageRoute(builder: (context) => const Landing()),
+        );
       }
     } catch (e) {
       _emailController.clear();

@@ -5,14 +5,14 @@ import 'package:hive_flutter/hive_flutter.dart';
 import 'package:study_smart/firebase_options.dart';
 import 'package:study_smart/pages/authentication/set_name.dart';
 import 'package:study_smart/pages/landing.dart';
-
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:study_smart/utils/error.dart';
 
 import 'package:study_smart/utils/globals.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  
+
   /// Set the device orientation to landscape
   SystemChrome.setPreferredOrientations(
       [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
@@ -22,10 +22,9 @@ Future<void> main() async {
   box = await Hive.openBox('userbox');
 
   getDBInformation();
-  
+
   runApp(const MyApp());
 }
-
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -72,7 +71,7 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-    if (loggedIn) {
+    if (FirebaseAuth.instance.currentUser != null) {
       return const Landing();
     } else {
       return const SetName();
